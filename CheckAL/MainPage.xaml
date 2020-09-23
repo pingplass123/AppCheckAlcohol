@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CheckAL.MainPage">
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+            <Label Text="CheckItAL " HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+        </Frame>
+        <Label Text="Start check alcohol in your blood" FontSize="20" HorizontalOptions="Center" />
+
+       
+            
+                
+       
+        <Button Text="Calculater BAC" Clicked="Button_Clicked" HorizontalOptions="Center"/>
+        <Button Text="Calculater Calories" Clicked="Button_Clicked_1" HorizontalOptions="Center"/>
+        <Button Text="Heart rate" Clicked="Button_Clicked_2" HorizontalOptions="Center"/>
+
+    </StackLayout>
+</ContentPage>
