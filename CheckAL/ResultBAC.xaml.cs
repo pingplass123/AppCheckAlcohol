@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -7,28 +7,52 @@ namespace CheckAL
 {
     public partial class ResultBAC : ContentPage
     {
-        private const double V = 0.55;
+        private const double Female = 0.55;
+        private const double Male = 0.68;
 
-        public ResultBAC(String gender,String wight,String height,String alcohol,String startTime,String endTime)
+        public ResultBAC(String gender,String wight,String height,String alcohol)
         {
             InitializeComponent();
 
-            
-            float v2 = Convert.ToInt64(wight);
+            float IntWeight = Convert.ToInt64(wight);
             float.Parse(height);
 
-            float CalBAC = (float)(500 * 40 * 0.79) / 100;
-            float BAC2 = (float)(CalBAC / (V * v2));
-            float al = (float)System.Math.Round(BAC2, 2);
-            string alinblood = Convert.ToString(al);
-            
+            if (gender == "Female") {
 
-            //String a = CALBAC(gender, wight, height);
+               
 
-            BAC.Text = "BAC   \t\t\t\t\t\t\t\t\t " + alinblood + " g/kg";
-            Level.Text = "Level of BAC \t\t\t\t\t\t " + "Level 5";
-            Time_Sober.Text = "Time to sober in";
-            Time_behind.Text = "Time to sit behind the wheel";
+                float CalBAC = (float)(500 * 40 * 0.79) / 100;
+                float BAC2 = (float)(CalBAC / (Female * IntWeight));
+                float al = (float)System.Math.Round(BAC2, 2);
+                string alinblood = Convert.ToString(al);
+
+
+                //String a = CALBAC(gender, wight, height);
+
+                BAC.Text = "BAC   \t\t\t\t\t\t\t\t\t " + alinblood + " g/kg";
+                Level.Text = "Level of BAC \t\t\t\t\t\t " + "Level 5";
+                Time_Sober.Text = "Time to sober in";
+                Time_behind.Text = "Time to sit behind the wheel";
+            }
+
+            else if (gender == "Male")
+            {
+                float v2 = Convert.ToInt64(wight);
+                float.Parse(height);
+
+                float CalBAC = (float)(500 * 40 * 0.79) / 100;
+                float BAC2 = (float)(CalBAC / (Male * IntWeight));
+                float al = (float)System.Math.Round(BAC2, 2);
+                string alinblood = Convert.ToString(al);
+
+
+                //String a = CALBAC(gender, wight, height);
+
+                BAC.Text = "BAC   \t\t\t\t\t\t\t\t\t " + alinblood + " g/kg";
+                Level.Text = "Level of BAC \t\t\t\t\t\t " + "Level 5";
+                Time_Sober.Text = "Time to sober in";
+                Time_behind.Text = "Time to sit behind the wheel";
+            }
             
 
         }
@@ -45,6 +69,8 @@ namespace CheckAL
 
             return alinblood;
         }*/
+
+        
 
         public String Caltime(String stime,String etime)
         {
