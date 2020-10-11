@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CheckAL.SecondPage">
     <ContentPage.Content>
 
@@ -7,13 +7,23 @@
             <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
             <Label Text="Calculate BAC" HorizontalTextAlignment="Center" TextColor="White" FontSize="20" />
         </Frame>
+            <Label Text="Gender" FontSize="13" />
+            <Entry x:Name="Gender" />
+            <Label Text="Weight" FontSize="13" />
+            <Entry x:Name="wight" MaxLength="3" Placeholder="Number" TextChanged="OnEntryTextChanged"
+       Completed="OnEntryCompleted" Keyboard="Numeric"/>
+            <Label Text="Height" FontSize="13" />
+            <Entry x:Name="Hight" MaxLength="3" Placeholder="Number" TextChanged="OnEntryTextChanged"
+       Completed="OnEntryCompleted" Keyboard="Numeric"/>
+            <Label Text="AlCohol Type" FontSize="13" />
+            <Entry x:Name="Alcohol"/>
+            <Label Text="Start Time" FontSize="13" />
+            <TimePicker x:Name="StartTime"/>
+            <Label Text="End Time" FontSize="13" />
+            <TimePicker x:Name="EndTime"/>
 
-            <Entry Text="Gender" x:Name="Gender"/> 
-            <Entry Text="Wight" x:Name="wight"/>
-            <Entry Text="Hight" x:Name="Hight"/>
-            <Entry Text="Alcohol type" x:Name="Alcohol"/>
-            <Entry Text="Start Time" x:Name="StartTime"/>
-            <Entry Text="End Time" x:Name="EndTime"/>
+
+      
        
             <Button Text="Calculate" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
         </StackLayout>
