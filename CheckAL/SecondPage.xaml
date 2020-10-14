@@ -8,7 +8,8 @@
             <Label Text="Calculate BAC" HorizontalTextAlignment="Center" TextColor="White" FontSize="20" />
         </Frame>
             <Label Text="Gender" FontSize="13" />
-            <Entry x:Name="Gender" />
+            <Picker x:Name="Gender" SelectedIndexChanged="Gender_SelectedIndexChanged"/>
+        
             <Label Text="Weight" FontSize="13" />
             <Entry x:Name="wight" MaxLength="3" Placeholder="Number" TextChanged="OnEntryTextChanged"
        Completed="OnEntryCompleted" Keyboard="Numeric"/>
@@ -16,16 +17,19 @@
             <Entry x:Name="Hight" MaxLength="3" Placeholder="Number" TextChanged="OnEntryTextChanged"
        Completed="OnEntryCompleted" Keyboard="Numeric"/>
             <Label Text="AlCohol Type" FontSize="13" />
-            <Entry x:Name="Alcohol"/>
+            <Picker x:Name="Alcohol" SelectedIndexChanged="Alcohol_SelectedIndexChanged"></Picker>
             <Label Text="Start Time" FontSize="13" />
             <TimePicker x:Name="StartTime"/>
             <Label Text="End Time" FontSize="13" />
             <TimePicker x:Name="EndTime"/>
 
+            
+
+
 
       
        
-            <Button Text="Calculate" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
+            <Button Text="Calculate" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" BackgroundColor="Black" />
         </StackLayout>
 
 
