@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CheckAL.CalculateCal">
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+            <Label Text="calories " HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+        </Frame>
+        <Label Text="Start check calories in your body" FontSize="20" HorizontalOptions="Center" />
+
+        <Label Text="Calories"/>
+        <Entry  x:Name="calories" Placeholder="Calories" TextChanged="OnEntryTextChanged" Keyboard="Numeric"/>
+        <Label Text="Weight" FontSize="13" />
+            <Picker x:Name="Weight" SelectedIndexChanged="Weight_SelectedIndexChanged"/>
+        
+         <Label Text="Height" FontSize="13" />
+            <Picker x:Name="Height" SelectedIndexChanged="Height_SelectedIndexChanged"/>
+        
+
+        <Button Text="Calculate" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
+                
+       
+
+    </StackLayout>
+</ContentPage>
