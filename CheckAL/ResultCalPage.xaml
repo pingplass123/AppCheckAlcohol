@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CheckAL.ResultCalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+            <Label Text="Result" HorizontalTextAlignment="Center" TextColor="White" FontSize="20" />
+        </Frame>
+            
+            
+            <Label Text="Cal" x:Name="calo" Grid.Row="0" Grid.Column="0" FontSize="20"/>
+            <Label Text="Time to burn out Cal" x:Name="time" Grid.Row="0" Grid.Column="0" FontSize="20"/>
+           
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
