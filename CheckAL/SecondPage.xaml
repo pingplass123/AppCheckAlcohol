@@ -7,20 +7,26 @@
             <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
             <Label Text="Calculate BAC" HorizontalTextAlignment="Center" TextColor="White" FontSize="20" />
         </Frame>
-            <Label Text="Gender" FontSize="13" />
+            
+            <Label Text="Gender" FontSize="13" TextColor="White"/>
             <Picker x:Name="Gender" SelectedIndexChanged="Gender_SelectedIndexChanged"/>
         
-            <Label Text="Weight" FontSize="13" />
-            <Entry x:Name="wight" MaxLength="3" Placeholder="Number" TextChanged="OnEntryTextChanged"
-       Completed="OnEntryCompleted" Keyboard="Numeric"/>
-            <Label Text="Height" FontSize="13" />
-            <Entry x:Name="Hight" MaxLength="3" Placeholder="Number" TextChanged="OnEntryTextChanged"
-       Completed="OnEntryCompleted" Keyboard="Numeric"/>
-            <Label Text="AlCohol Type" FontSize="13" />
+            <Label Text="Weight" FontSize="13" TextColor="White"/>
+            <Picker x:Name="Weight" SelectedIndexChanged="Weight_SelectedIndexChanged"/>
+            
+            <Label Text="Height" FontSize="13" TextColor="White"/>
+            <Picker x:Name="Height1" SelectedIndexChanged="Height_SelectedIndexChanged"/>
+            
+            <Label Text="AlCohol Type" FontSize="13" TextColor="White" />
             <Picker x:Name="Alcohol" SelectedIndexChanged="Alcohol_SelectedIndexChanged"></Picker>
-            <Label Text="Start Time" FontSize="13" />
+            
+             <Label Text="Vouleum" x:Name="vl" FontSize="13" TextColor="White"/>
+            <Entry x:Name="vm" Keyboard="Numeric" />
+            
+            <Label Text="Start Time" FontSize="13" TextColor="White" />
             <TimePicker x:Name="StartTime"/>
-            <Label Text="End Time" FontSize="13" />
+            
+            <Label Text="End Time" FontSize="13" TextColor="White"/>
             <TimePicker x:Name="EndTime"/>
 
             
@@ -29,7 +35,7 @@
 
       
        
-            <Button Text="Calculate" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" BackgroundColor="Black" />
+            <Button Text="Calculate" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" BackgroundColor="DarkOrange" HeightRequest="50" WidthRequest="200" TextColor="Black"/>
         </StackLayout>
 
 
