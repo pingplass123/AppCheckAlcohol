@@ -5,14 +5,16 @@
             <Label Text="CheckItAL " HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
         </Frame>
         <Label Text="Start check alcohol in your blood" FontSize="20" HorizontalOptions="Center" />
+        
+        <StackLayout Margin="20,20,20,20">
 
        
             
                 
        
-        <Button Text="Calculater BAC" Clicked="Button_Clicked" HorizontalOptions="Center"/>
-        <Button Text="Calculater Calories" Clicked="Button_Clicked_1" HorizontalOptions="Center"/>
-        <Button Text="Heart rate" Clicked="Button_Clicked_2" HorizontalOptions="Center"/>
-
+        <Button Text="Calculater BAC" Clicked="Button_Clicked" HorizontalOptions="Center" BackgroundColor="DarkOrange"   HeightRequest="50" WidthRequest="200" TextColor="Black"/>
+        <Button Text="Calculater Calories" Clicked="Button_Clicked_1" HorizontalOptions="Center" BackgroundColor="DarkOrange"   HeightRequest="50" WidthRequest="200" TextColor="Black"/>
+        <Button Text="Heart rate" Clicked="Button_Clicked_2" HorizontalOptions="Center" BackgroundColor="DarkOrange"   HeightRequest="50" WidthRequest="200" TextColor="Black"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
