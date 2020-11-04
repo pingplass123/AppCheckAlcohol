@@ -138,18 +138,16 @@ namespace CheckAL
             
 
         }
+            public void connectionDB()
+        {
+            MySqlConnection con = new MySqlConnection("server=db4free.net;port=3307;database=alcohol;User id=pingplass;password=670qeycc");
+            con.Open();
 
+            //MySqlCommand cmd = new MySqlCommand("INSERT INTO CheckAL()");
+        }
 
         
 
-        public String Caltime(String stime,String etime)
-        {
-            return null;
-        }
-
-        public String CalLevelBAC(String bac)
-        {
-            return null;
-        }
+      
     }
 }
