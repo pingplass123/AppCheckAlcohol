@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CheckAL.HartRatePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+        <Frame BackgroundColor="DarkOrange" Padding="24" CornerRadius="0">
+            <Label Text="Heart Rate " HorizontalTextAlignment="Center" TextColor="White" FontSize="60" FontFamily="MyAwesomeCustomFont" />
+        </Frame>
+        <Label Text="Start check alcohol in your blood" FontSize="20" HorizontalOptions="Center" />
+
+       
+         <StackLayout Margin="20,20,20,20">   
+
+        <Button Text="Open Flash" Clicked="Button_Clicked"
+                HorizontalOptions="Center" BackgroundColor="DarkOrange"
+                HeightRequest="50" WidthRequest="200" TextColor="Black"/>
+
+        <Button Text="Close Flash" Clicked="Button_Clicked_1"
+                HorizontalOptions="Center" BackgroundColor="DarkOrange"
+                HeightRequest="50" WidthRequest="200" TextColor="Black"/>
+
+         </StackLayout>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
