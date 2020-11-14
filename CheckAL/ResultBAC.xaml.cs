@@ -138,14 +138,28 @@ namespace CheckAL
             
 
         }
-            public void connectionDB()
+            async void saveData_Clicked(System.Object sender, System.EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server=db4free.net;port=3307;database=alcohol;User id=pingplass;password=670qeycc");
-            con.Open();
 
-            //MySqlCommand cmd = new MySqlCommand("INSERT INTO CheckAL()");
+
+            var db = new SQLiteConnection(_dbPath);
+            db.CreateTable<Singleton>();
+
+            var maxPk = db.Table<Singleton>().OrderByDescending(c => c.Id).FirstOrDefault();
+
+            Singleton singleton = new Singleton()
+            {
+                Id = (maxPk == null ? 1 : maxPk.Id + 1),
+                BAC = bacInblood,
+                typeAL = type,
+                LevelBAC = levelBAC
+
+            };
+            db.Insert(singleton);
+            await DisplayAlert(null, "Completed", "OK");
+            await Navigation.PopAsync();
+            
         }
-
         
 
       
